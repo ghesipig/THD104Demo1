@@ -1,0 +1,792 @@
+@import url('reset.css');
+
+/* ------------------------------------ */
+body{
+    line-height: 1.6;
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+:root {
+    --black: #2c2c2c;
+    --white: #ffffff;
+    --orange: #E27C00;
+}
+
+.text-h1{
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.text-h2{
+    font-size: 26px;
+}
+
+.text-h3{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.text-h4{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.text-p1{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.text-p2{
+    font-size: 12px;
+}
+
+/* QA內容用 */
+.text-p2-qa{
+    font-size: 20px;
+    line-height: 2.8;
+}
+
+*,*:before,*:after{
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+a{
+    text-decoration: none;
+    display: block;
+}
+
+/* 麵包屑指引樣式 */
+.content-bread{
+    text-align-last: left;
+    margin-bottom: 10px;
+}
+
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+
+    padding-top: 120px;
+}
+/* ------------------       header    ---------------------- */
+header{
+    height: 120px;
+    background-color: var(--black);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* RWD準備 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 1200px;
+    max-width: 100%;
+
+    z-index: 2;
+}
+
+/* logo點擊到首頁 */
+header h1 > a{
+    width: 81px;
+    height: 86px;
+
+    background-image: url(../img/index/logo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    text-indent: 101%;
+    overflow: hidden;    
+    white-space: nowrap;
+
+    margin-left: 30px;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-right: 30px;
+}
+
+.menu li.menu-item {
+    text-align: center;
+}
+
+.menu li.menu-item:nth-child(4) {
+    margin-right: 50px;
+}
+
+.menu li.menu-item a{
+    color: var(--white);
+    width: 110px;
+}
+
+.menu li.menu-icon a > i{
+    display: block;
+
+    font-size: 25px;
+    color: var(--white);
+}
+
+
+.menu li.menu-icon{
+    padding: 0  15px;
+}
+
+.menu li a:hover{
+    color: var(--orange);
+    font-size: 16px;
+}
+
+.menu li a:hover i{
+    color: var(--orange);
+}
+
+/* RWD漢堡標籤 */
+.showmenu{
+    display: none;
+    color: var(--white);
+    font-size: 30px;
+
+    margin-right: 8vw;
+}
+/* -------------------------footer------------------------------ */
+footer{
+    height: 250px;
+    background-color: var(--black);
+
+    color: var(--white);
+}
+
+.footer-top{
+    display: flex;
+    justify-content: space-evenly;
+
+    padding-top: 30px;
+}
+
+.footer-top h1 a{
+    width: 81px;
+    height: 86px;
+
+    background-image: url(../img/index/logo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    text-indent: 101%;
+    overflow: hidden;    
+    white-space: nowrap;
+
+    margin-left: 30px;
+}
+
+.footer-menu li{
+    width: 110px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+.footer-menu li a{
+    color: var(--white);
+}
+
+.footer-menu li a:hover{
+    font-size: 22px;
+    color: var(--orange);
+}
+
+.footer-contract li{
+    display: flex;
+    align-items: start;
+    margin-bottom: 15px;    
+}
+
+.footer-contract li p{
+    margin-left: 15px;
+}
+
+.footer-icon li{
+    margin-bottom: 10px;
+}
+
+footer p.copyright {
+    text-align: center;
+    font-size: 10px;
+    padding-top: 65px;
+}
+
+/* -------------------------index content-------------------------------- */
+.content{
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 15px;
+
+    text-align: center;
+}
+
+.content > h1{
+    margin-bottom: 10px;
+}
+
+.content p{
+    margin-bottom: 10px;
+}
+
+.content-products{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    margin-bottom: 10px;
+}
+
+.content-products li{
+    border: 1px solid black;
+    border-radius: 6px;
+}
+
+.content-products li h1{
+    padding: 10px 0;
+}
+
+.content .more {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 10px;
+}
+
+.content a.more-item{
+    color: var(--black);
+    text-align: right;
+    margin-right: 80px;
+
+    border: 1px solid black;
+    border-radius: 7px;
+    padding: 2px 10px;
+}
+
+a.more-item .fa-angle-right{
+    margin-left: 10px;
+}
+
+.content-grid{
+    display: grid;
+    grid-template-columns: 62% 34.75%;
+    column-gap: 3.25%;
+
+    margin-bottom: 30px;
+}
+
+.content-grid .content-grid-item3{
+    grid-column: 1 / 3;
+    margin-top: 3%;
+}
+
+/* -----------------------index slide---------------------------- */
+
+.index-slide {
+    position: relative;
+    max-width: 800px;
+    max-height: 100%;
+
+    margin-bottom: 110px;
+}
+  
+.index-slide img {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+    transition: 0.8s;
+}
+
+.index-slide img.show {
+    opacity: 1;
+}
+
+div.index-slide > a{
+    color: white;
+    font-size: 60px;
+    width: 40px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .12);
+}
+
+.index-slide > a.prevBtn{
+    position: absolute;
+    top: 38%;
+    left: 0;
+
+    z-index: 1;
+}
+
+.index-slide > a.nextBtn{
+    position: absolute;
+    top: 38%;
+    right: 0;
+
+    z-index: 1;
+}
+
+div.index-slide > a:hover{
+    background-color: rgba(0, 0, 0, .5);
+}
+
+/* -------------------------about climbing content-------------------------------- */
+.climbing-content{
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 15px;
+}
+
+ul.introduce{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul.introduce li.introduce-photo{
+    margin-bottom: 15px;
+    width: 58%;
+}
+
+ul.introduce li.introduce-photo img{
+    display: block;
+}
+
+ul li.introduce-text{
+    margin-bottom: 15px;
+    padding: 20px;
+    width: 42%;
+}
+
+/* --------------------------------Q&A content-------------------------------- */
+
+.qa-content{
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 15px;
+    margin-bottom: 30px;
+}
+
+.qa-content > .qa-content-center{
+    text-align: center;
+}
+
+.qa-content > p.qa-content-center{
+    margin-bottom: 20px;
+}
+
+ul.qa-content-main{
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+ul.qa-content-main li > h1{
+    width: 210px;
+    
+    /* 水平垂直置中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: 10px;
+}
+
+ul.qa-content-main li > p{
+    padding: 20px;
+}
+
+/* -------------------------about us content-------------------------------- */
+.us-content{
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 15px;
+    margin-bottom: 30px;
+}
+
+.us-content img{
+    display: block;
+}
+
+.us-content .us-content-text{
+    max-width: 440px;
+    padding: 15px;
+    text-align: center;
+
+    border: 1px solid var(--black);
+    background-color: var(--white);
+}
+
+.us-content .us-content-item1{
+    display: flex;
+    position: relative;
+
+    margin-bottom: 60px;
+}
+
+.us-content .us-content-text1{
+    position: absolute;
+    left: 46%;
+    top: 70%;
+}
+
+.us-content .us-content-item2{
+   display: flex;
+   flex-direction: row-reverse;
+   position: relative;
+
+   margin-bottom: 100px;
+}
+
+.us-content .us-content-text2{
+    position: absolute;
+    right: 46%;
+    top: 85%;
+}
+
+/* -------------------------member content-------------------------------- */
+
+.member-content{
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 15px;
+    margin-bottom: 30px;
+}
+
+.member-content-main{
+    border: 1px solid var(--black);
+    border-radius: 8px;
+    padding: 50px 60px;
+}
+
+.member-content-main label{
+    display: block;
+    margin-bottom: 10px;
+}
+
+.member-content-main > input{
+    width: 700px;
+    max-width: 100%;
+    height: 45px;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+/* 忘記密碼 */
+a.password-forgot{
+    margin-bottom: 30px;
+}
+
+/* 註冊及登入 */
+.member-content-main ul.member-content-main-login{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+}
+
+ul.member-content-main-login .login-item{
+    display: block;
+    width: 160px;
+    height: 50px;
+    border-radius: 8px;
+    cursor: pointer;
+
+    background-color: var(--black);
+    color: var(--white);
+}
+
+ul.member-content-main-login .login-item:hover{
+    background-color: var(--orange);
+    border: 1px solid var(--orange);
+}
+
+/* 分隔線們 */
+.member-content-main > h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.member-content-main > h1::before,
+.member-content-main > h1::after{
+    content: '';
+    width: 200px;
+    max-width: 100%;
+    height: 1px;
+    margin: 0 10px;
+    background-color: var(--black);
+}
+
+/* 其他登入方式 */
+.member-content-main ul.member-content-main-loginby li{
+    border-radius: 8px;
+    border: 1px solid var(--black);
+    margin-bottom: 20px;
+}
+
+ul.member-content-main-loginby li img{
+    margin-right: 30px;
+}
+
+ul.member-content-main-loginby li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    padding: 10px 0;
+}
+
+ul.member-content-main-loginby li a:hover{
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+
+/* -------------------------all products content-------------------------------- */
+
+.product-content{
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 15px;
+    margin-bottom: 30px;
+}
+
+.product-content > h1{
+    margin-bottom: 50px;
+}
+
+.product-content a{
+    color: var(--black);
+}
+
+.product-content main{
+    display: flex;
+}
+
+.nav-menu{
+    width: 35%;
+}
+
+.nav-menu h1.nav-menu-item1{
+    font-size: 34px;
+}
+
+.nav-menu > h1{
+    margin-bottom: 20px ;
+}
+
+/* 商品 */
+.product-item{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.product-item li{
+    width: 223px;
+    height: 230px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.product-item li a{
+    height: 100%;
+    width: 70%;
+    border: 1px solid black;
+    border-radius: 6px;
+}
+
+.product-item li a > img{
+    height: 150px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+/* -------------------------one product content-------------------------------- */
+.goods-content{
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 15px;
+    margin-bottom: 30px;
+}
+
+div.goods-main{
+    display: flex;
+
+    margin-bottom: 60px;
+}
+
+ul.goods-photo{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    height: 580px;
+    padding: 15px;
+}
+
+ul.goods-photo li:nth-child(1){
+    width: 346px;
+    max-width: 100%;
+}
+
+ul.goods-photo li a img{
+    display: block;
+    
+    border: 1px solid black;
+}
+
+div.goods-text > p:nth-of-type(1){
+    margin-bottom: 20px;
+}
+
+/* 尺寸選擇 */
+.goods-size{
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.goods-size > label{
+    margin: 0 30px 0 10px ;
+}
+
+.goods-size > select{
+    width: 315px;
+    max-width: 100%;
+    height: 35px;
+    border-radius: 8px;
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 26px;
+}
+
+/* 數量選擇 */
+.goods-quantity{
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 50px;
+}
+
+.goods-quantity > label{
+    margin: 0 30px 0 10px ;
+}
+
+.goods-quantity a > .goods-quantity-icon{
+    font-size: 26px;
+    color: black;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+.goods-quantity a:hover > .goods-quantity-icon{
+    color: var(--orange);
+    border: 2px solid var(--orange);
+}
+
+.goods-quantity > input{
+    width: 260px;
+    max-width: 100%;
+    height: 35px;
+    border-radius: 8px;
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 26px;
+}
+
+/* 購物車及購買按鈕 */
+div.goods-buy{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+}
+
+div.goods-buy > button{
+    width: 150px;
+    font-weight: bold;
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: 8px;
+}
+
+div.goods-buy > button:hover{
+    background-color: var(--orange);
+    border: 1px solid var(--orange);
+}
+
+.goods-content > h1.goods-more{
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* 更多商品 */
+.goods-content-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.goods-content-item li{
+    border: 1px solid black;
+    border-radius: 6px;
+    padding-bottom: 15px;
+}
+
+.goods-content-item li h1{
+    padding: 10px 0;
+}
+
+.goods-content-item li a{
+    color: black;
+}
+
+/* lightBox one product content */
+div.light-box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: hsla(0, 0%, 0%, .5);
+}
+
+div.light-box-toggle{
+    display: none;
+}
+
+div.light-box > div.light-box-inner{
+    background-color: white;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ddd;
+    padding: 10px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

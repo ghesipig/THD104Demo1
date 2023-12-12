@@ -1,0 +1,82 @@
+@media screen and (max-width : 780px){
+    .showmenu{
+        display: block;
+    }
+
+    .menu{
+        flex-direction: column;
+        justify-content: center;
+
+        position: fixed;
+        top: -650px;
+        left: 0;
+
+        width: 100%;
+
+        background-color: lightgray;
+        /* 確保在最上層 */
+        z-index: 1;
+    }
+
+    header .menu > li,
+    header .menu > li.menu-icon{
+        width: 100%;
+        padding: 0;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu > li.menu-item:nth-of-type(4){
+        margin:0;
+    }
+
+    header ul.menu > li.menu-item a,
+    header ul.menu > li.menu-icon a{
+        display: block;
+        width: 100%;
+
+        display: flex;
+        justify-content: start;
+
+        padding: 15px;
+        font-size: 22px;
+
+        border-bottom: 1px solid #2c2c2c;
+    }
+
+    header ul.menu > li.menu-item a{
+        padding-left: 30%;
+    }
+
+    header ul.menu > li.menu-item a h1{
+        margin-right: 15px;
+        width: 30%;
+    }
+
+    header ul.menu > li.menu-icon a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header ul.menu > li.menu-icon a i{
+        margin-right: 20px;
+    }
+
+    header ul.menu > li.menu-icon a::after{
+        content: attr(title);
+
+        font-size: 22px;
+        font-weight: bold;
+        color: white;
+    }
+
+    header ul.menu > li.menu-icon:hover a::after{
+        color: #E27C00;
+    }
+
+    .menu-toggle{
+        top: 120px;
+    }
+}
