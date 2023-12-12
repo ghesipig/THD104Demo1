@@ -322,16 +322,18 @@ div.index-slide > a{
 
 .index-slide > a.prevBtn{
     position: absolute;
-    top: 38%;
+    top: 50%;
     left: 0;
+    transform: translate(0, -50% );
 
     z-index: 1;
 }
 
 .index-slide > a.nextBtn{
     position: absolute;
-    top: 38%;
+    top: 50%;
     right: 0;
+    transform: translate(0, -50% );
 
     z-index: 1;
 }
