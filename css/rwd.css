@@ -1,3 +1,65 @@
+
+@media screen and (max-width : 820px) {
+
+    /* 首頁商品加入購物車 */
+    .content-products li > a.index-add-to-cart{
+        position: static;
+
+        background-color: #2c2c2c;
+
+        border-radius: 5px;
+    
+        display: block;
+    }
+
+    .content-products li a.index-add-to-cart:hover{
+        background-color: #E27C00;
+    }
+
+    /* 所有商品頁面加入購物車 */
+    .product-item li{
+        width: 223px;
+        height: 270px;
+    
+        flex-direction: column;
+    
+        margin-bottom: 30px;
+    }
+
+    .product-item li a.products-add-to-cart{
+        position: static;
+        background-color: #2c2c2c;
+
+        border-radius: 5px;
+    
+        display: block;
+    }
+    
+    .product-item li a.products-add-to-cart:hover{
+        background-color: #E27C00;
+    }
+
+    /* 單一商品頁面加入購物車 */
+    .goods-content-item li{
+        padding: 0;
+    }
+    .goods-content-item li a.goods-add-to-cart{
+        position: static;
+
+        background-color: #2c2c2c;
+
+        border-radius: 5px;
+    
+        display: block;
+    }
+    
+    .goods-content-item li:hover a.goods-add-to-cart{
+        background-color: #E27C00;
+    }
+}
+
+
+
 @media screen and (max-width : 820px){
     /* 單一商品頁面 */
     ul.goods-photo li:nth-child(1){
