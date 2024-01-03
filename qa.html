@@ -17,6 +17,7 @@
     <div class="wrapper">
     <!---------------------------------    header    ------------------------------------->
     <header>
+
         <h1>
             <a href="index.html">首頁</a>
         </h1>
@@ -46,7 +47,7 @@
                 </a>
             </li>
 
-            <li class="menu-icon">
+            <li class="menu-icon menu-icon-search">
                 <a href="#" title="搜尋">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </a>
@@ -58,14 +59,92 @@
             </li>
 
             <li class="menu-icon">
-                <a href="#" title="購物車">
+                <a class="menu-icon-cart" href="#" title="購物車">
                     <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="menu-icon-cartnumber">0</span>
+                </a>
+            </li>
+        </ul>
+
+        <ul class="menu-rwd">
+            <li class="text-h4 menu-item-rwd">
+                <a href="aboutClimbing.html">
+                    <h1>關於攀岩</h1>
+                    <p>About Climbing</p>
+                </a>
+            </li>
+            <li class="text-h4 menu-item-rwd">
+                <a href="products.html">
+                    <h1>所有商品</h1>
+                    <p>All Items</p>
+                </a>
+            </li>
+            <li class="text-h4 menu-item-rwd">
+                <a href="aboutUs.html">
+                    <h1>關於我們</h1>
+                    <p>About Us</p>
+                </a>
+            </li>
+            <li class="text-h4 menu-item-rwd">
+                <a href="qa.html">
+                    <h1>常見問題</h1>
+                    <p>Q&A</p>
+                </a>
+            </li>
+
+            <li class="menu-icon-rwd menu-icon-rwd-search">
+                <a href="#" title="搜尋">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+            </li>
+            <li class="menu-icon-rwd">
+                <a href="member.html" title="會員">
+                    <i class="fa-regular fa-user"></i>
+                </a>
+            </li>
+
+            <li class="menu-icon-rwd">
+                <a class="menu-icon-cart-rwd" href="#" title="購物車">
+                    <i class="fa-solid fa-cart-shopping"></i>
+
                 </a>
             </li>
         </ul>
 
         <!-- RWD漢堡標籤 -->
         <a href="#" class="showmenu"><i class="fa-solid fa-bars"></i></a>
+
+        <!-- 搜尋燈箱 -->
+        <div class="search-light-box search-light-box-toggle">
+            <div class="search-light-box-inner">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="在這裡輸入關鍵字">
+                    <input type="submit" value="搜尋">
+
+            </div>
+        </div>
+
+        <!-- 購物車清單 -->
+        <div class="cart">
+            <div class="cart-menu">
+
+                <div class="cart-top">
+                    <h1 class="text-h1">購物車</h1>
+                    <i id="close-btn" class="fas fa-times cart-menu-close-btn"></i>
+                </div>
+
+                <!-- 商品新增處 -->
+                <div class="product-rows">
+                </div>
+
+                <div class="cart-menu-total">
+                    <h1 class="cart-total text-h2">合計</h1>
+                    <span class="total-price text-p1">$0</span>
+                </div>
+                <button class="purchase-btn text-h3">結帳去</button>
+            </div>
+        </div>
 
     </header>
     <!---------------------------------    main    ------------------------------------->   
@@ -83,12 +162,14 @@
             <ul class="qa-content-main">
                 <li>
                     <h1 class="text-h2">支付方式有那些?</h1>
-                    <p class="text-p2-qa">1.信用卡支付： 快速、安全，支援主流信用卡。<br>
-                       2.PayPal： 全球知名的線上支付平台，方便迅速完成交易。<br>
-                       3.銀行轉帳： 提供銀行賬戶信息，您可選擇使用轉帳支付。<br>
-                       4.貨到付款： 在收到商品後現場支付給快遞員。<br>
-                       5.數位錢包： 使用 Apple Pay、Google Pay 等數位錢包輕<br>
-                       &nbsp;&nbsp;&nbsp;鬆支付。</p>
+
+                    <ul class="qa-content-main-item">
+                        <li class="text-p2-qa">1.信用卡支付： 快速、安全，支援主流信用卡。</li>
+                        <li class="text-p2-qa">2.PayPal： 全球知名的線上支付平台，方便迅速完成交易。</li>
+                        <li class="text-p2-qa">3.銀行轉帳： 提供銀行賬戶信息，您可選擇使用轉帳支付。</li>
+                        <li class="text-p2-qa">4.貨到付款： 在收到商品後現場支付給快遞員。<br></li>
+                        <li class="text-p2-qa">5.數位錢包： 使用 Apple Pay、Google Pay 等數位錢包輕鬆支付。</li>
+                    </ul>
                 </li>
 
                 <li>
@@ -100,9 +181,12 @@
 
                 <li>
                     <h1 class="text-h2">尺寸不合怎麼辦?</h1>
-                    <p class="text-p2-qa">1.退換政策： 若您收到的商品尺寸不符預期，我們接受商品退換。請確保商品未經使用、保持原狀，並在收到商品後的指定時間內聯絡我們的客服進行相關安排。<br>
-                        2.尺寸指南： 在購物過程中，請仔細參閱商品頁面上的尺寸指南。我們致力提供詳細的尺寸資訊，以協助您做出正確的選擇。<br>
-                        3.客服支援： 若您對尺寸有任何疑問，歡迎隨時聯絡我們的客服團隊。他們將竭誠為您提供協助，並回答您的所有問題</p>
+
+                    <ul class="qa-content-main-item">
+                        <li class="text-p2-qa">1.退換政策： 若您收到的商品尺寸不符預期，我們接受商品退換。請確保商品未經使用、保持原狀，並在收到商品後的指定時間內聯絡我們的客服進行相關安排。</li>
+                        <li class="text-p2-qa">2.尺寸指南： 在購物過程中，請仔細參閱商品頁面上的尺寸指南。我們致力提供詳細的尺寸資訊，以協助您做出正確的選擇。</li>
+                        <li class="text-p2-qa">3.客服支援： 若您對尺寸有任何疑問，歡迎隨時聯絡我們的客服團隊。他們將竭誠為您提供協助，並回答您的所有問題</li>
+                    </ul>   
                 </li>
             </ul>  
         </div>

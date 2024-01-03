@@ -1,9 +1,82 @@
+@media screen and (max-width : 820px){
+    /* 單一商品頁面 */
+    ul.goods-photo li:nth-child(1){
+        max-width: 280px;
+    }
+
+    ul.goods-photo li.goods-photo-item{
+        max-width: 80px;
+    }
+}
+
+@media screen and (max-width : 750px){
+    /* 單一商品頁面 */
+    .goods-main{
+        flex-direction: column;
+    }
+
+    .goods-main > .swiper {
+        display: block;
+    }
+
+    .goods-main > ul.goods-photo{
+        display: none;
+    }
+}
+
+@media screen and (max-width : 450px){
+    /* 單一商品頁面 */
+    ul.goods-description{
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width : 720px){
+    /* footer */
+    div.footer-top > h1{
+        display: none;
+    }
+}
+
+@media screen and (max-width : 500px){
+    /* footer */
+    div.footer-top > ul.footer-icon{
+        display: none;
+    }
+}
+
+@media screen and (max-width : 460px){
+    /* footer */
+    .footer-top{
+        justify-content: center;
+    }
+    div.footer-top > ul.footer-menu > li{
+        font-size: 16px;
+        width: 100px;
+    }
+    ul.footer-contract li > i{
+        font-size: 12px;
+        /* color: red; */
+    }
+
+    ul.footer-contract li > p{
+        margin-left: 0;
+    }
+}
+
 @media screen and (max-width : 780px){
+
+    /* 漢堡選單 */
     .showmenu{
         display: block;
     }
 
-    .menu{
+    /* 原先的menu隱藏 */
+    ul.menu{
+        display: none;
+    }
+
+    ul.menu-rwd{
         flex-direction: column;
         justify-content: center;
 
@@ -18,8 +91,8 @@
         z-index: 1;
     }
 
-    header .menu > li,
-    header .menu > li.menu-icon{
+    header ul.menu-rwd > li,
+    header ul.menu-rwd > li.menu-icon-rwd{
         width: 100%;
         padding: 0;
 
@@ -27,12 +100,12 @@
         justify-content: center;
     }
 
-    .menu > li.menu-item:nth-of-type(4){
+    ul.menu-rwd > li.menu-item-rwd:nth-of-type(4){
         margin:0;
     }
 
-    header ul.menu > li.menu-item a,
-    header ul.menu > li.menu-icon a{
+    header ul.menu-rwd > li.menu-item-rwd a,
+    header ul.menu-rwd > li.menu-icon-rwd a{
         display: block;
         width: 100%;
 
@@ -45,26 +118,26 @@
         border-bottom: 1px solid #2c2c2c;
     }
 
-    header ul.menu > li.menu-item a{
+    header ul.menu-rwd > li.menu-item-rwd a{
         padding-left: 30%;
     }
 
-    header ul.menu > li.menu-item a h1{
+    header ul.menu-rwd > li.menu-item-rwd a h1{
         margin-right: 15px;
         width: 30%;
     }
 
-    header ul.menu > li.menu-icon a{
+    header ul.menu-rwd > li.menu-icon-rwd a{
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    header ul.menu > li.menu-icon a i{
+    header ul.menu-rwd > li.menu-icon-rwd a i{
         margin-right: 20px;
     }
 
-    header ul.menu > li.menu-icon a::after{
+    header ul.menu-rwd > li.menu-icon-rwd a::after{
         content: attr(title);
 
         font-size: 22px;
@@ -72,11 +145,217 @@
         color: white;
     }
 
-    header ul.menu > li.menu-icon:hover a::after{
+    header ul.menu-rwd > li.menu-icon-rwd:hover a::after{
         color: #E27C00;
     }
 
-    .menu-toggle{
-        top: 120px;
+    /* try */
+    ul.menu-rwd.menu-open{
+        display: block;
+    }
+
+    /* 購物車側邊欄位 */
+    div.cart-menu{
+        height: 100%;
+        width: 40vw;
+    }
+
+    /* 所有商品頁面 */
+    .product-item li{
+        width: 200px;
+    }  
+}
+
+
+
+@media screen and (max-width : 700px){
+    /* 所有商品頁面 */
+    .product-item li{
+        width: 180px;
     }
 }
+
+
+@media screen and (max-width : 640px){
+    /* 所有商品頁面 */
+    .product-item li{
+        width: 180px;
+    }
+    .nav-menu{
+        display: none;
+    }
+}
+
+@media screen and (max-width : 560px){
+    /* 所有商品頁面 */
+    .product-item li{
+        width: 200px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width : 419px){
+    /* 所有商品頁面 */
+    .product-item li{
+        width: 180px;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width : 380px){
+    /* 所有商品頁面 */
+    .product-item li{ 
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+}
+
+
+
+@media screen and (max-width : 690px){
+
+    /* 搜尋 */
+    .search-light-box-inner{
+        width: 80%;
+        height: 14rem;
+    }
+
+    .search-light-box-inner > i{
+        font-size: 3rem;
+    }
+
+    .search-light-box-inner > input[type = text]{
+        width: 90%;
+    }
+
+    .search-light-box-inner > input[type = submit]{
+        width: 90%;
+        font-size: 2rem;
+        padding: 0 .8rem;
+    }
+
+    /* 購物車側邊欄位 */
+    div.cart-menu{
+        height: 100%;
+        width: 50vw;
+    }
+}
+
+
+
+@media screen and (max-width : 660px) {
+
+    /* 關於攀岩頁 */
+    div.introduce-inner:nth-of-type(2){
+        flex-direction: row;
+    }
+
+    ul.introduce li.introduce-photo > img{
+        min-height: 275px;
+        min-width: 207px;
+    }
+
+    ul.introduce li.introduce-text{
+        max-width: 50%;
+        max-height: 100%;
+
+        border: 1px solid #2c2c2c;
+
+        padding: 0 1rem;
+        margin-bottom: 0;
+    }
+
+    ul.introduce li.introduce-text > h1{
+        font-size: 18px;
+    }
+
+    ul.introduce li.introduce-text > p{
+        font-size: 14px;
+    }
+
+}
+
+
+@media screen and (max-width : 590px) {
+    
+    /* about-us頁 */
+    .us-content .us-content-item1{
+        display: flex;
+        flex-wrap: wrap ;
+    }
+    
+    div.us-content div.us-content-text1{
+        position: static;
+        max-width: 519px;
+    }
+    
+    
+    .us-content .us-content-item2{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    
+    .us-content .us-content-text2{
+        position: static;
+        max-width: 519px;
+        width: 519px;
+    }
+}
+
+
+
+@media screen and (max-width : 550px){
+    /* 購物車側邊欄位 */
+    div.cart-menu{
+        height: 100%;
+        width: 80vw;
+    }
+}
+
+
+@media screen and (max-width : 450px) {
+
+    /* 關於攀岩頁 */
+    ul.introduce li.introduce-text{
+        max-height: 275px;
+
+        overflow: hidden;
+    }
+
+    ul.introduce li.introduce-text.toggle{
+        max-height: 100%;
+    }
+
+    li.introduce-text > a{
+        display: block;
+
+        display: flex;
+        align-items: center;
+
+        color: #2c2c2c;
+
+        font-size: 14px;
+        font-weight: bold;
+
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+    }
+
+    li.introduce-text > a:hover{
+        color: #E27C00;
+    }
+
+    li.introduce-text > a:hover > i.introduce-text-toggle{
+        color: #E27C00;
+    }
+
+    li.introduce-text > a > i.introduce-text-toggle{
+        font-size: 20px;
+        color: #2c2c2c;
+        margin-left: 1rem;
+    }
+}
+

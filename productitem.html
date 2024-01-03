@@ -7,16 +7,22 @@
 
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 
     <!-- RWD -->
     <link rel="stylesheet" href="css/rwd.css">
+
+    <!-- jQuery -->
+    <script src="js/jquery-3.7.1.js"></script>
 </head>
 <body>
     <div class="wrapper">
     <!---------------------------------    header    ------------------------------------->
     <header>
+
         <h1>
             <a href="index.html">首頁</a>
         </h1>
@@ -46,7 +52,7 @@
                 </a>
             </li>
 
-            <li class="menu-icon">
+            <li class="menu-icon menu-icon-search">
                 <a href="#" title="搜尋">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </a>
@@ -58,14 +64,92 @@
             </li>
 
             <li class="menu-icon">
-                <a href="#" title="購物車">
+                <a class="menu-icon-cart" href="#" title="購物車">
                     <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="menu-icon-cartnumber">0</span>
+                </a>
+            </li>
+        </ul>
+
+        <ul class="menu-rwd">
+            <li class="text-h4 menu-item-rwd">
+                <a href="aboutClimbing.html">
+                    <h1>關於攀岩</h1>
+                    <p>About Climbing</p>
+                </a>
+            </li>
+            <li class="text-h4 menu-item-rwd">
+                <a href="products.html">
+                    <h1>所有商品</h1>
+                    <p>All Items</p>
+                </a>
+            </li>
+            <li class="text-h4 menu-item-rwd">
+                <a href="aboutUs.html">
+                    <h1>關於我們</h1>
+                    <p>About Us</p>
+                </a>
+            </li>
+            <li class="text-h4 menu-item-rwd">
+                <a href="qa.html">
+                    <h1>常見問題</h1>
+                    <p>Q&A</p>
+                </a>
+            </li>
+
+            <li class="menu-icon-rwd menu-icon-rwd-search">
+                <a href="#" title="搜尋">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+            </li>
+            <li class="menu-icon-rwd">
+                <a href="member.html" title="會員">
+                    <i class="fa-regular fa-user"></i>
+                </a>
+            </li>
+
+            <li class="menu-icon-rwd">
+                <a class="menu-icon-cart-rwd" href="#" title="購物車">
+                    <i class="fa-solid fa-cart-shopping"></i>
+
                 </a>
             </li>
         </ul>
 
         <!-- RWD漢堡標籤 -->
         <a href="#" class="showmenu"><i class="fa-solid fa-bars"></i></a>
+
+        <!-- 搜尋燈箱 -->
+        <div class="search-light-box search-light-box-toggle">
+            <div class="search-light-box-inner">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="在這裡輸入關鍵字">
+                    <input type="submit" value="搜尋">
+
+            </div>
+        </div>
+
+        <!-- 購物車清單 -->
+        <div class="cart">
+            <div class="cart-menu">
+
+                <div class="cart-top">
+                    <h1 class="text-h1">購物車</h1>
+                    <i id="close-btn" class="fas fa-times cart-menu-close-btn"></i>
+                </div>
+
+                <!-- 商品新增處 -->
+                <div class="product-rows">
+                </div>
+
+                <div class="cart-menu-total">
+                    <h1 class="cart-total text-h2">合計</h1>
+                    <span class="total-price text-p1">$0</span>
+                </div>
+                <button class="purchase-btn text-h3">結帳去</button>
+            </div>
+        </div>
 
     </header>
     <!---------------------------------    main    ------------------------------------->   
@@ -75,15 +159,33 @@
 
         <h1 class="content-bread">首頁 > 所有商品 > Dragon LV</h1>
 
-        <div class="goods-content">
+            <div class="goods-content">
 
             <div class="goods-main">
+
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide"><img src="img/products/projuct-scarpa-large1.png"></div>
+                        <div class="swiper-slide"><img src="img/products/projuct-scarpa-large2.png"></div>
+                        <div class="swiper-slide"><img src="img/products/projuct-scarpa-large3.png"></div>
+                    
+                    </div>
+                
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                </div>
+
                 <ul class="goods-photo">
                     <li class="goods-photo-large"><a href="#"><img src="img/products/projuct-scarpa-large1.png"></a></li>
 
-                    <li class="goods-photo-item1"><a href=""><img src="img/products/projuct-scarpa-small1.png"></a></li>
-                    <li class="goods-photo-item2"><a  href="#"><img src="img/products/projuct-scarpa-small2.png"></a></li>
-                    <li class="goods-photo-item3"><a  href="#"><img src="img/products/projuct-scarpa-small3.png"></a></li>
+                    <li class="goods-photo-item1 goods-photo-item"><a href=""><img src="img/products/projuct-scarpa-small1.png"></a></li>
+                    <li class="goods-photo-item2 goods-photo-item"><a  href="#"><img src="img/products/projuct-scarpa-small2.png"></a></li>
+                    <li class="goods-photo-item3 goods-photo-item"><a  href="#"><img src="img/products/projuct-scarpa-small3.png"></a></li>
                 </ul>
                 <div class="goods-text">
                     <h1 class="text-h1">Scarpa Dragon LV攀岩鞋</h1>
@@ -114,13 +216,13 @@
                         <button class="text-h2 goods-buy-btn2" type="button">直接購買</button>
                     </div>
 
-
-                    <p class="text-p1">特色特點：<br>
-                        1.抓地力卓越： 我們的攀岩鞋配備高度耐磨的橡膠鞋底，提供卓越的抓地力和靈敏度。無論是崎嶇的岩石還是平滑的表面，都能提供絕佳的牢固支撐。<br>
-                        2.精準設計： 鞋面採用精心設計的合成材料，確保腳部穩固包覆，提供優越的支撐和穩定性。同時，鞋頭的尖端設計可輕鬆穿越狹窄的裂縫和岩石結構。
-                    </p>
+                    <p class="text-p1 btn-description"><a href="#">商品特點<i class="fa-solid fa-chevron-down"></i></a></p>
+                    <ul class="goods-description">
+                        <li class="text-p1">1.抓地力卓越： 我們的攀岩鞋配備高度耐磨的橡膠鞋底，提供卓越的抓地力和靈敏度。無論是崎嶇的岩石還是平滑的表面，都能提供絕佳的牢固支撐。</li>
+                        <li class="text-p1">2.精準設計： 鞋面採用精心設計的合成材料，確保腳部穩固包覆，提供優越的支撐和穩定性。同時，鞋頭的尖端設計可輕鬆穿越狹窄的裂縫和岩石結構。</li>
+                        <li class="text-p1">3.舒適度一流：我們的攀岩鞋鞋墊設計符合人體工學，提供良好的彈性和支撐，使攀岩過程更加舒適，並減輕長時間使用帶來的壓力。</li>
+                    </ul>
                 </div>
-
                 
             </div>
 
@@ -129,26 +231,32 @@
             <ul class="goods-content-item">
                 <li>
                     <a href="#">
-                        <img src="img/products/projuct-BD.png">
-                        <h1 class="text-h3">BD腰帶</h1>
-                        <p>NT$2000</p>
+                        <img class="product-img-js" src="img/products/projuct-BD.png">
+                        <h1 class="text-h3 product-item-js">BD腰帶</h1>
+                        <p class="product-price-js">NT$2000</p>
                     </a>
+
+                    <a href="#" class="goods-add-to-cart add-to-cart-js">加入購物車</a>
                 </li>
 
                 <li>
                     <a href="#">
-                        <img src="img/products/projuct-chalk.png">
-                        <h1 class="text-h3">止滑粉</h1>
-                        <p>NT$600</p>
+                        <img class="product-img-js" src="img/products/projuct-chalk.png">
+                        <h1 class="text-h3 product-item-js">止滑粉</h1>
+                        <p class="product-price-js">NT$600</p>
                     </a>
+
+                    <a href="#" class="goods-add-to-cart add-to-cart-js">加入購物車</a>
                 </li>
 
                 <li>
                     <a href="#">
-                        <img src="img/products/projuct-rope.png">
-                        <h1 class="text-h3">專業繩索</h1>
-                        <p>NT$2000</p>
+                        <img class="product-img-js" src="img/products/projuct-rope.png">
+                        <h1 class="text-h3 product-item-js">專業繩索</h1>
+                        <p class="product-price-js">NT$2000</p>
                     </a>
+
+                    <a href="#" class="goods-add-to-cart add-to-cart-js">加入購物車</a>
                 </li>
             </ul>
         </div>
@@ -218,6 +326,9 @@
             <p class="copyright">本網站為緯育TibaMe【第89期】前端工程師專業技術養成班學員作品,僅供學習、展示之用途。</p>
         </footer>
     </div>
+    
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     
     <script src="js/all.js"></script>
     <script src="js/oneprojuct.js"></script>

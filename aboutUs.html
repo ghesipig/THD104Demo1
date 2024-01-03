@@ -17,6 +17,7 @@
     <div class="wrapper">
     <!---------------------------------    header    ------------------------------------->
     <header>
+
         <h1>
             <a href="index.html">首頁</a>
         </h1>
@@ -46,7 +47,7 @@
                 </a>
             </li>
 
-            <li class="menu-icon">
+            <li class="menu-icon menu-icon-search">
                 <a href="#" title="搜尋">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </a>
@@ -58,14 +59,94 @@
             </li>
 
             <li class="menu-icon">
-                <a href="#" title="購物車">
+                <a class="menu-icon-cart" href="#" title="購物車">
                     <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="menu-icon-cartnumber">0</span>
+                </a>
+            </li>
+        </ul>
+
+        <ul class="menu-rwd">
+            <li class="text-h4 menu-item-rwd">
+                <a href="aboutClimbing.html">
+                    <h1>關於攀岩</h1>
+                    <p>About Climbing</p>
+                </a>
+            </li>
+            <li class="text-h4 menu-item-rwd">
+                <a href="products.html">
+                    <h1>所有商品</h1>
+                    <p>All Items</p>
+                </a>
+            </li>
+            <li class="text-h4 menu-item-rwd">
+                <a href="aboutUs.html">
+                    <h1>關於我們</h1>
+                    <p>About Us</p>
+                </a>
+            </li>
+            <li class="text-h4 menu-item-rwd">
+                <a href="qa.html">
+                    <h1>常見問題</h1>
+                    <p>Q&A</p>
+                </a>
+            </li>
+
+            <li class="menu-icon-rwd menu-icon-rwd-search">
+                <a href="#" title="搜尋">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+            </li>
+            <li class="menu-icon-rwd">
+                <a href="member.html" title="會員">
+                    <i class="fa-regular fa-user"></i>
+                </a>
+            </li>
+
+            <li class="menu-icon-rwd">
+                <a class="menu-icon-cart-rwd" href="#" title="購物車">
+                    <i class="fa-solid fa-cart-shopping"></i>
+
                 </a>
             </li>
         </ul>
 
         <!-- RWD漢堡標籤 -->
         <a href="#" class="showmenu"><i class="fa-solid fa-bars"></i></a>
+
+        <!-- 搜尋燈箱 -->
+        <div class="search-light-box search-light-box-toggle">
+            <div class="search-light-box-inner">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="在這裡輸入關鍵字">
+                    <input type="submit" value="搜尋">
+
+            </div>
+        </div>
+
+        <!-- 購物車清單 -->
+        <div class="cart">
+            <div class="cart-menu">
+
+                <div class="cart-top">
+                    <h1 class="text-h1">購物車</h1>
+                    <i id="close-btn" class="fas fa-times cart-menu-close-btn"></i>
+                </div>
+
+                <!-- 商品新增處 -->
+                <div class="product-rows">
+                </div>
+
+
+                <div class="cart-menu-total">
+                    <h1 class="cart-total text-h2">合計</h1>
+                    <span class="total-price text-p1">$0</span>
+                </div>
+                <button class="purchase-btn text-h3">結帳去</button>
+            </div>
+        </div>
+
 
     </header>
     <!---------------------------------    main    ------------------------------------->   
