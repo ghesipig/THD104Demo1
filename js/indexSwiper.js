@@ -19,7 +19,10 @@ function showNext(e){
   showCurrent();
 
   // 取消a默認動作
-  e.preventDefault();
+  // 自動撥放加入if判斷
+  if (e) {
+    e.preventDefault();
+  }
 }
 
 function showPrev(e){
@@ -29,6 +32,18 @@ function showPrev(e){
   // 取消a默認動作
   e.preventDefault();
 }
+
+// 設定自動撥放
+let autoSlide = setInterval(showNext, 4000);
+
+slide.addEventListener('mouseover', function(){
+  clearInterval(autoSlide);
+});
+
+slide.addEventListener('mouseout', function(){
+  autoSlide = setInterval(showNext, 4000);
+});
+
 
 //  按鈕
 const nextBtn = document.querySelector('div.index-slide > a.nextBtn');
@@ -48,3 +63,4 @@ slide.style.height = slidePhoto2.offsetHeight + 'px';
 window.addEventListener('resize', function() {
   slide.style.height = slidePhoto2.offsetHeight + 'px';
 });
+
