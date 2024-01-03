@@ -124,6 +124,8 @@ header.switch{
 /* RWDmenu隱藏 */
 header ul.menu-rwd{
     display: none;
+
+    z-index: 2;
 }
 
 /* logo點擊到首頁 */
